@@ -6,6 +6,7 @@ import 'PagesHome/Home.dart';
 import 'PagesLog/Log.dart';
 import 'PagesTally/Tally.dart';
 import 'PagesTeam/Team.dart';
+import 'chat_ui/chat_main.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});

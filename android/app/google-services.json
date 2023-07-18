@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "3734590598",
+    "project_id": "erc-application",
+    "storage_bucket": "erc-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3734590598:android:6e144c1fe82c0e339aad07",
+        "android_client_info": {
+          "package_name": "com.example.erc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3734590598-upb51dc5n6fjpbhesvt8ignd52mio37v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBn5D78UMBbuoT4Ur5poGM9tOSOIMm1zrQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3734590598-upb51dc5n6fjpbhesvt8ignd52mio37v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
