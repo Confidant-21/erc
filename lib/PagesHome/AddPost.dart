@@ -56,7 +56,7 @@ class _AddPostState extends State<AddPost> {
   
     if (_pickedImage != Null) {
       showDialog(context: context, builder: (context) {
-        return Center(child: CircularProgressIndicator());
+        return Center(child: CircularProgressIndicator(color: Color(0xFF04356D),));
       },);
       final _pathInDevice = 'ERC Feed/${_pickedImage!.path}';
       final file = File(_pickedImage!.path);
