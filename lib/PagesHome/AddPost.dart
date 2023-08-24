@@ -33,16 +33,15 @@ class _AddPostState extends State<AddPost> {
 
   Future<void> storeImageDownloadUrl(String imageUrl) async {
     FirebaseApp app = await Firebase.initializeApp();
-    if (imageUrl != Null && _descriptionController != Null) {
+    if (imageUrl != null && _descriptionController != null) {
       await FirebaseFirestore.instance.collection('images').add({
-        'image_url': imageUrl,
+       // 'image_url': imageUrl,
         'description': _descriptionController.text,
-        'likes' : 0,
+        'likes': 0,
         // Other data fields you might want to store
       });
     }
   }
-
 
   Future<String> _getImageDownloadUrl(String imagePath) async {
     FirebaseApp app = await Firebase.initializeApp();
@@ -53,16 +52,21 @@ class _AddPostState extends State<AddPost> {
   }
 
   Future<void> _uploadImagetoFirestore() async {
-  
-    if (_pickedImage != Null) {
-      showDialog(context: context, builder: (context) {
-        return Center(child: CircularProgressIndicator(color: Color(0xFF04356D),));
-      },);
+    if (_pickedImage != null) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return Center(
+              child: CircularProgressIndicator(
+            color: Color(0xFF04356D),
+          ));
+        },
+      );
       final _pathInDevice = 'ERC Feed/${_pickedImage!.path}';
       final file = File(_pickedImage!.path);
 
       final ref = FirebaseStorage.instance.ref().child(_pathInDevice);
-      ref.putFile(file);
+      await ref.putFile(file);
       String _URLPath = await _getImageDownloadUrl(_pathInDevice);
       print(_URLPath);
       await storeImageDownloadUrl(_URLPath);

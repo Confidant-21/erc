@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'Homepage.dart';
+import 'package:erc/test.dart';
 
 void main () async
 {
@@ -22,6 +23,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Homepage(),
+     // home: FirestorePage(),
     );
   }
 }
